@@ -88,7 +88,7 @@ const GetBusesByFromAndTo = async (req, res) => {
     res.status(200).send({
       message: "Buses fetched successfully",
       success: true,
-      data: filteredBuses,
+      data: buses,
     });
   } catch (error) {
     res.status(500).send({

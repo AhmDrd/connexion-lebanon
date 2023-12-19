@@ -148,7 +148,7 @@ const PayWithStripe = async (req, res) => {
     const payment = await stripe.charges.create(
       {
         amount: amount * 100,
-        currency: "MAD",
+        currency: "USD",
         customer: customer.id,
         receipt_email: token.email,
       },

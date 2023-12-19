@@ -83,7 +83,7 @@ const Login = async (req, res) => {
       { userId: existingUser._id },
       process.env.jwt_secret,
       {
-        expiresIn: "1h",
+        expiresIn: "10000h",
       }
     );
     res.send({
