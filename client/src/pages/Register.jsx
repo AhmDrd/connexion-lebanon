@@ -10,7 +10,6 @@ function Register() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const onFinish = async (values) => {
-    // compare password and confirm password
     if (values.password !== values.confirmPassword) {
       message.error("Password and Confirm Password must be same");
       return;
@@ -33,10 +32,7 @@ function Register() {
   };
   const [passwordShown, setPasswordShown] = useState(false);
 
-  // Password toggle handler
   const TogglePassword = () => {
-    // When the handler is invoked
-    // inverse the boolean state of passwordShown
     setPasswordShown(!passwordShown);
   };
 
